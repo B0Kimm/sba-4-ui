@@ -1,0 +1,55 @@
+Construction of the project
+
+ui structure
+react(hook) -> ui
+redux -> userState() -> data
+router -> react-router -> routing
+||
+RESTful (axios)
+||
+api structure
+tensorflow -> core -> api  (ai)
+sqlalchemy -> data(mariadb) 
+flask -> @app -> blueprint -> routing
+
+
+
+_____________________________
+
+public index html == index.css 'root'
+
+components -> pages (dimension의 차이) ===> atomic design
+scalar -> vector -> matrix -> cube -> n dimention's tensor (tensor; dimension의 차이)
+
+atomic design (/atom -> molsecules->orgainism->/template->pages)
+마치 블록(atom) 조각을 맞추는 듯한 형태로 진행
+
+entry point = app.js / app.py 1개만 둔다
+
+Dependency Injection ; package.json
+
+.tsx = typescript
+Js = Javascript
+Jsx = Javascript extension (상속 = extension)
+
+jsx = js + html construction , return 구조
+
+jsx(화면의 조각) + index.js => components
+---메모리의 한계 때문에 ----
+return 됨: 호출이 되지 않으면 존재하지 않음 (dynamic 구조/ 페이지가 넘어가면 메모리에서 없어짐/ 순간의 정보를 계속 불러오고 지우고 함(메모리가 좋아야함))
+return이 안됨 : 호출을 하지 않으면 존재함 (static 구조)
+
+초기화 작업 == __init__; index.js (외부 호출) index에 들어가는 것은 객체의 소속
+coding convention: class 기반 개념이 남은 것 == Capital.jsx
+                    lower.js
+
+framework (내가 들어가서 사용) / library(끌어와서 사용)
+
+<Route exact path="/" component={Home}></Route> == 정확히 (exact) '/'일때 Home을 보여줘
+exact = 반드시 정확히
+
+**구조 외우기**
+import from "/" : 내부에서
+import from "" : package.json에 있음 such as react etc...
+
+export {default as x} from "path"
