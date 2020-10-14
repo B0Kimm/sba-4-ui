@@ -53,3 +53,69 @@ import from "/" : 내부에서
 import from "" : package.json에 있음 such as react etc...
 
 export {default as x} from "path"
+
+----------------141020-----------
+
+ui structure
+react(hook) -> ui
+redux -> userState() -> data
+router -> react-router -> routing
+index.js
+||
+RESTful (axios)
+||
+api structure
+tensorflow -> core -> api  (ai)
+sqlalchemy -> data(mariadb) 
+flask -> @app -> blueprint -> routing
+__init__.py
+
+User, Board, Item, Home
+
+컴공 -> 대수학(산수)
+(exist) T =1, F=0                                   --------T, f
+function                                            --------function 추가
+object = function(기능) + propertys(속성)
+return parameter(매개변수)
+(REACT)export import 
+
+2 = 1 + ?
+
+함수의 4개의 형태
+return parameter(매개 변수)
+0       0                   ---> Learnable (무한동력)
+0       1                   ----> consumer
+1       0                   -----> supplier
+1       1                   -----> function
+
+dim
+extension
+object
+
+OOP object = function + props (object = class)
+FP function = object - props (class = F)
+HTML, DB(SQL) props = object - function
+
+
+Javascript = 함수도 객체다
+
+jsx HTML(화면)
+js function(기능)
+==> directory = object(객체)
+
+상위 객체 = class
+하위 객체 = element
+
+
+class Member{
+
+    private String name;
+    public setName(string name), getName()
+}
+
+객체지향 4대 원칙
+
+은닉화, 다형성, 상속, 추상화
+DTO : get, set
+extends : object
+interface: @Override
