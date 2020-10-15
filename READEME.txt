@@ -119,3 +119,28 @@ class Member{
 DTO : get, set
 extends : object
 interface: @Override
+
+
+atomic <-> duck typing
+
+
+============151020========
+SPA(Single page application just like ebook)
+
+1층 APP (yarn 기본 페이지)
+
+pages
+2층 Home, User,Board, Item
+components (Nav)를 통해 이동
+
+4층 Menu
+templates
+
+3층 UserCRUD
+
+component
+template
+Menu
+
+
+container == userState : data processing하는 기능이 추가되었을때 

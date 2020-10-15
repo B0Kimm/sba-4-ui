@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import axios from "axios"
+import {User} from "../../templates"
 
 const UserLogin = () => {
     const [userid, setUserid] = useState()
@@ -28,7 +29,7 @@ const UserLogin = () => {
         e.preventDefault()
     }
  
-    return (<>
+    return (<User>
     <h1>Login</h1>
     <table>
         <tr>
@@ -46,8 +47,8 @@ const UserLogin = () => {
             </td>
         </tr>
     </table>
-</>
-)}
+</User>)
+}
 
 export default UserLogin
 
