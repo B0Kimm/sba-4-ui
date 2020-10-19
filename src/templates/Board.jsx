@@ -1,12 +1,5 @@
-import React from "react"
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
-import {BoardMenu as Menu} from "../components"
-// import {BoardCreate, BoardDelete, BoardMenu, BoardRead, BoardUpdate} from "./Board"
+import React from 'react'
 
-const Board = ({children}) => <>
-    <h1>board</h1>
-    <Menu/>
-    {children}
+const Nav = () => (<><h1>Nav</h1></>)
 
-</>
-export default Board
+export default Nav

@@ -1,6 +1,4 @@
-import React from "react"
+import React from 'react'
 
-const BoardUpdate = () => <>
-</>
-
-export default BoardUpdate
+const boardupdate = () => <> board create입니다</>
+export default boardupdate

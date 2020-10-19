@@ -1,6 +1,4 @@
-import React from "react"
+import React from 'react'
 
-const BoardDelete = () => <>
-</>
-
-export default BoardDelete
+const boarddelete = () => <> board create입니다</>
+export default boarddelete

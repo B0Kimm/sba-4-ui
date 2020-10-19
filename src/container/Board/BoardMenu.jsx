@@ -1,16 +1,15 @@
-import React from "react"
-import {Link} from "react-router-dom"
+import React from 'react'
+import {Link} from 'react-router-dom'
+import {boardcreate,boarddelete,boardread,boardupdate} from '.'
 
-
-const BoardMenu = () => <>
+const boardmenu = () =><>
 <nav>
     <ol>
-        <li><Link to='/board/create'>create</Link></li>
-        <li><Link to='/board/read'>read</Link></li>
-        <li><Link to='/board/update'>Update</Link></li>
-        <li><Link to='/board/delete'>delete</Link></li>
+        <li><Link to='/board/create'>boardcreate</Link></li> 
+        <li><Link to='/board/read'>boardread</Link></li> 
+        <li><Link to='/board/update'>boardupdate</Link></li> 
+        <li><Link to='/board/delete'>boarddelete</Link></li> 
     </ol>
 </nav>
 </>
-
-export default BoardMenu
+export default boardmenu 

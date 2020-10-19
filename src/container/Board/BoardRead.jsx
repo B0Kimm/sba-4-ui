@@ -1,6 +1,4 @@
-import React from "react"
+import React from 'react'
 
-const BoardRead = () => <>
-</>
-
-export default BoardRead
+const boardread = () => <> board create입니다</>
+export default boardread

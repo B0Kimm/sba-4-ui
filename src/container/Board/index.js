@@ -1,5 +1,5 @@
-export {default as BoardCreate} from "./BoardCreate"
-export {default as BoardRead} from "./BoardRead"
-export {default as BoardDelete} from "./BoardDelete"
-export {default as BoardUpdate} from "./BoardUpdate"
-export {default as BoardMenu} from "./BoardMenu"
+export {default as boardcreate} from './boardcreate'
+export {default as boardread} from './boardread'
+export {default as boardupdate} from './boardupdate'
+export {default as boarddelete} from './boarddelete'
+export {default as boardmenu} from './boardmenu'
