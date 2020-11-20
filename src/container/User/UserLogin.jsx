@@ -3,53 +3,61 @@ import axios from "axios"
 import {User} from "../../templates"
 
 const UserLogin = () => {
-    const [userid, setUserid] = useState()
-    const [userpassword, setUserpassword] = useState()
+    const [userid, setUserid] = useState('')
+    const [userpassword, setUserpassword] = useState('')
     // const userData = {
     //     userid,
     //     password
     // }
     // 'userid' : userid => userid: userid => userid ; 키와 값이 같다
     // 직접 post에 집어넣음
-
+    const history = useHistory();
     const login = e => {
         e.preventDefault()
-        alert(`로그인 아이디 : ${userid}, 비밀번호 ${userpassword}`)
+        // alert(`로그인 아이디 : ${userid}, 비밀번호 ${userpassword}`)
         // ''에는 플라스크에서 작동하는 API가 들어감
-        axios.post('', {userid, userpassword})
-            .then(res => {
-                alert('Success')
-            })
-            .catch(error => {
-                alert('Fail')
-            })
+        .then(res => {
+            alert(`Welcome ! ${res.data["name"]}.  ${res.data["userid"]}'s connection is successful. ! `)
+
+            sessionStorage.setItem("sessionUser", res.data['userid']);
+            window.location.reload()
+            history.push("/home");
+            
+        })
+        .catch(error => {
+            alert("Please check your ID or password.");
+            window.location.reload();
+        })
+
+}
         //post(send) then(success) catch(fail)
-    }
+
     const cancel = e => {
         e.preventDefault()
     }
  
-    return (<User>
-    <h1>Login</h1>
-    <table>
+    return (<>
+    <h1>Signin Form</h1> <form>
+    <table  className='tab_layer'>
+       
         <tr>
             <td>ID : </td>
             <td><input type="text" onChange={e => setUserid(`${e.target.value}`)}/></td>
         </tr>
         <tr>
-            <td>PASSWORD : </td>
-            <td><input type="text" onChange={e => setUserpassword(`${e.target.value}`)}/></td>
+            <td> PW : </td>
+            <td> <input type="text" onChange={e => setPassword(`${e.target.value}`)}/> </td>
         </tr>
         <tr>
-            <td colSpan="2">
-                <input type="button" value="LOGIN" onClick={login}/>
-                <input type="button" value="CANCEL" onClick={cancel}/>
+            <td colspan={2}>
+                <input type="button" value="LOGIN" onClick= {login}/>
+                <input type="button" value="CANCEL" onClick= {cancel}/>
             </td>
         </tr>
-    </table>
-</User>)
-}
-
+       
+    </table> </form>
+    </>)
+    }
 export default UserLogin
 
 //tr = table row,  td = table cell

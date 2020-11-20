@@ -1,4 +1,6 @@
-export {default as ItemCreate} from "./ItemCreate"
-export {default as ItemRead} from "./ItemRead"
-export {default as ItemUpdate} from "./ItemUpdate"
-export {default as ItemDelete} from "./ItemDelete"
+export {default as ItemList} from './ItemList'
+export {default as ItemDetail} from './ItemDetail'
+export {default as ModifyItem} from './ModifyItem'
+export {default as RegisterItem} from './RegisterItem'
+export {default as RemoveItem} from './RemoveItem'
+export {default as ItemChatBot} from './ItemChatBot'

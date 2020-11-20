@@ -1,26 +1,21 @@
 import React from 'react'
 import './table.style.css'
+import {ItemChatBot} from "../container/items"
 import axios from 'axios'
-
-const Home = () => {
-
+export default function Home(props){ 
     const test = () => {
         axios.get(`http://localhost:8080/api`)
-        .then(res => {
-            alert(`Connection Success !!`)
-        }
-        
-        ).catch(
-            e => alert(`Failure`)
-        )
+            .then(res => {
+                alert(`Connection Success !!`)
+            }
+                
+            ).catch(
+                e => alert(`Failure`)
+            )
     }
-
-
     return(<>
-    <table className='tab_layer'>
-    <tr><td><h1>Home</h1></td></tr>
-    <tr><td><button onClick={test}>Connection Test</button></td></tr>
-    </table>
-    </>)}
-
-export default Home
+           <table className='tab_layer'><tr><td><h1>Home</h1></td></tr>
+            <tr><td><button onClick={test}>Connection Test</button></td></tr></table>   
+            <ItemChatBot/>    
+            </>)
+}
